@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+    elm:
+        build: docker
+        user: user
+        working_dir: /home/user/app
+        entrypoint: elm
+        command: --help
+        ports:
+            - 8000:8000
+        volumes:
+            - .:/home/user/app
+
+    yarn:
+        build: docker
+        user: user
+        working_dir: /home/user/app
+        entrypoint: yarn
+        command: --help
+        volumes:
+            - .:/home/user/app
