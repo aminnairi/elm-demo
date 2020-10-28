@@ -1,4 +1,4 @@
-.PHONY: install start format tests
+.PHONY: install start format tests build
 
 install:
 	docker-compose build
@@ -12,3 +12,6 @@ format:
 
 tests:
 	docker-compose run --rm yarn elm-test
+
+build:
+	docker-compose run --rm elm make --output dist/index.html src/Main.elm
