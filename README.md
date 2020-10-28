@@ -28,8 +28,18 @@ $ make install
 $ make start
 ```
 
+> *Navigate to [`localhost:8000`](http://localhost:8000/) and open the `src/Main.elm` file to compile.*
+
 ## Elm Format
 
 ```console
 $ make format
 ```
+
+## Build
+
+```console
+$ make build
+```
+
+> *This will generate the `dist/index.html` file that you can upload to any web server.*
