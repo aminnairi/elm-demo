@@ -22,3 +22,5 @@ USER user
 
 ENV PATH=/usr/local/lib/nodejs/node-$NODE_VERSION-$NODE_DISTRO/bin:$PATH
 ENV PATH=/usr/local/lib/yarn/yarn-$YARN_VERSION/bin:$PATH
+
+WORKDIR /home/user/app
