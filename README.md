@@ -54,6 +54,12 @@ $ make build
 $ docker-compose run --rm elm --help
 ```
 
+### Node
+
+```console
+$ docker-compose run --rm node --help
+```
+
 ### Yarn
 
 ```console

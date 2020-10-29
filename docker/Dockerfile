@@ -3,6 +3,8 @@ FROM archlinux:20200908
 ENV NODE_VERSION v14.15.0
 ENV NODE_DISTRO linux-x64
 ENV YARN_VERSION v1.22.10
+ENV PATH=/usr/local/lib/nodejs/node-$NODE_VERSION-$NODE_DISTRO/bin:$PATH
+ENV PATH=/usr/local/lib/yarn/yarn-$YARN_VERSION/bin:$PATH
 
 WORKDIR /root
 
@@ -19,6 +21,10 @@ RUN mkdir -p /usr/local/lib/yarn
 RUN tar xzvf yarn-$YARN_VERSION.tar.gz -C /usr/local/lib/yarn
 
 USER user
+
+WORKDIR /home/user
+
+RUN mkdir /home/user/app
 
 ENV PATH=/usr/local/lib/nodejs/node-$NODE_VERSION-$NODE_DISTRO/bin:$PATH
 ENV PATH=/usr/local/lib/yarn/yarn-$YARN_VERSION/bin:$PATH
