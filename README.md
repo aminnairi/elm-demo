@@ -22,7 +22,9 @@ $ cd ~/aminnairi/elm-demo
 $ make install
 ```
 
-## Development Server
+## Commands
+
+### Development Server
 
 ```console
 $ make start
@@ -30,16 +32,42 @@ $ make start
 
 > *Navigate to [`localhost:8000`](http://localhost:8000/) and open the `src/Main.elm` file to compile.*
 
-## Elm Format
+### Elm Format
 
 ```console
 $ make format
 ```
 
-## Build
+### Build
 
 ```console
 $ make build
 ```
 
 > *This will generate the `dist/index.html` file that you can upload to any web server.*
+
+## Binaries
+
+### Elm
+
+```console
+$ docker-compose run --rm elm --help
+```
+
+### Yarn
+
+```console
+$ docker-compose run --rm yarn --help
+```
+
+### NPM
+
+```console
+$ docker-compose run --rm npm --help
+```
+
+### NPX
+
+```console
+$ docker-compose run --rm npx --help
+```
